@@ -19,8 +19,13 @@ import share from '@/assets/share.svg'
 import add from '@/assets/add.svg'
 import copy from '@/assets/copy.svg'
 
+interface VRPlayer {
+  theather: boolean,
+  toogleTheatherMode: boolean
+}
 
-export function VRPLayer(props) {
+
+export function VRPLayer(props: VRPlayer) {
   const [ playVideo, setPlayVideo ] = useState(false)
 
   const videoRef = useRef(null)

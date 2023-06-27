@@ -3,13 +3,18 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import { VRPLayer } from '@/components/VRPlayer'
+import { VRPLayer } from '@/components/VRPlayer' 
 
 import background from '@/assets/background.jpg'
 
 
 interface BackGroundProps {
   theather: boolean
+}
+
+interface VRPlayer {
+  theather: boolean,
+  toogleTheatherMode: boolean
 }
 
 const Background: React.FC<BackGroundProps> = (props) => {
