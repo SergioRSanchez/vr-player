@@ -12,7 +12,7 @@ interface BackGroundProps {
   theather: boolean
 }
 
-function Background(props:BackGroundProps) {
+const Background: React.FC<BackGroundProps> = (props) => {
   return (
     <Image 
       data-theather={props.theather}
