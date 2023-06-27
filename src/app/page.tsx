@@ -8,7 +8,11 @@ import { VRPLayer } from '@/components/VRPlayer'
 import background from '@/assets/background.jpg'
 
 
-function Background(props) {
+interface VRProps {
+  theather: boolean
+}
+
+function Background(props: VRProps) {
   return (
     <Image 
       theather={props.theather}
