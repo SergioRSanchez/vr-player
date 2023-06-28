@@ -28,13 +28,13 @@ interface VRPlayer {
 export function VRPLayer(props: VRPlayer) {
   const [ playVideo, setPlayVideo ] = useState(false)
 
-  const videoRef = useRef(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   function handleTooglePlay () {
-    if (videoRef.current.paused) {
+    if (videoRef.current && videoRef.current.paused) {
       videoRef.current.play()
       setPlayVideo(true)
     } else {
-      videoRef.current.pause()
+      videoRef.current?.pause()
       setPlayVideo(false)
     }
   }
