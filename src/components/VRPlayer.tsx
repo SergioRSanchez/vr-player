@@ -21,7 +21,7 @@ import copy from '@/assets/copy.svg'
 
 interface VRPlayer {
   theather: boolean,
-  toogleTheatherMode: boolean
+  toogleTheatherMode: () => void
 }
 
 
