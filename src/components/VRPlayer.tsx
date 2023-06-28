@@ -51,18 +51,18 @@ export function VRPLayer(props: VRPlayer) {
         }
       </button>
       <div className='flex flex-col h-min gap-3 p-3 bg-white rounded-full bg-opacity-10' style={{boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(255, 255, 255, 0.30) inset, 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset', backdropFilter: 'blur(16px)'}}>
-        <button onClick={handleTooglePlay} className={playVideo ? 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300' : 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'}>{playVideo ? <PauseCircle width={24} height={24} color='white'/> : <Image src={play} alt='play' />}</button>
-        <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={accessibility} alt='accessibility' /></button>
-        <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={albums} alt='albums' /></button>
-        <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={search} alt='search' /></button>
+        <button onClick={handleTooglePlay} className={playVideo ? 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200' : 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'}>{playVideo ? <PauseCircle width={24} height={24} color='white' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/> : <Image src={play} alt='play' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/>}</button>
+        <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={accessibility} alt='accessibility' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
+        <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={albums} alt='albums' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
+        <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={search} alt='search' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
       </div>
 
       <div className='flex flex-col gap-4 items-center'>
         <div className='p-2 bg-white rounded-full flex gap-8 bg-opacity-10 w-[792px]' style={{boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(255, 255, 255, 0.30) inset, 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset;', backdropFilter: 'blur(16px)'}}>
           <div className='flex gap-4'>
-            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={sidebar} alt='sidebar' /></button>
-            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={chevronBack} alt='back' /></button>
-            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={chevronForward} alt='forward' /></button>
+            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={sidebar} alt='sidebar' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
+            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={chevronBack} alt='back' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
+            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={chevronForward} alt='forward' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
           </div>
 
           <form action="" className='flex items-center justify-between w-[440px] px-3 bg-black bg-opacity-10 rounded-full' style={{boxShadow: '0px -1px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 0px 0px rgba(0, 0, 0, 0.20) inset;'}}>
@@ -75,9 +75,9 @@ export function VRPLayer(props: VRPlayer) {
           </form>
 
           <div className='flex gap-4 '>
-            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={share} alt='share' /></button>
-            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={add} alt='add' /></button>
-            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={copy} alt='copy' /></button>
+            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={share} alt='share' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
+            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={add} alt='add' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
+            <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={copy} alt='copy' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
           </div>
         </div>
 
