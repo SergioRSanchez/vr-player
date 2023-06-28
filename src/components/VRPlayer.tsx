@@ -51,7 +51,7 @@ export function VRPLayer(props: VRPlayer) {
         }
       </button>
       <div className='flex flex-col h-min gap-3 p-3 bg-white rounded-full bg-opacity-10' style={{boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(255, 255, 255, 0.30) inset, 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset', backdropFilter: 'blur(16px)'}}>
-        <button onClick={handleTooglePlay} className={playVideo ? 'p-2 rounded-full bg-white bg-opacity-20 transition-all duration-300' : 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'}>{playVideo ? <Image src={play} alt='play' /> : <PauseCircle width={24} height={24} color='white'/>}</button>
+        <button onClick={handleTooglePlay} className={playVideo ? 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300' : 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'}>{playVideo ? <PauseCircle width={24} height={24} color='white'/> : <Image src={play} alt='play' />}</button>
         <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={accessibility} alt='accessibility' /></button>
         <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={albums} alt='albums' /></button>
         <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'><Image src={search} alt='search' /></button>
