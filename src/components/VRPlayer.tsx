@@ -40,7 +40,7 @@ export function VRPLayer(props: VRPlayer) {
   }
 
   return (
-    <div className='flex gap-4 items-center'>
+    <div className='flex gap-4 items-center' id='app'>
       <button className='absolute top-4 right-4 transition-all duration-300 hover:scale-110 opacity-80 hover:opacity-100' onClick={props.toogleTheatherMode}>
         {
           props.theather
@@ -50,7 +50,7 @@ export function VRPLayer(props: VRPlayer) {
           <Lightbulb width={20} height={20} color='white' />
         }
       </button>
-      <div className='flex flex-col h-min gap-3 p-3 bg-white rounded-full bg-opacity-10' style={{boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(255, 255, 255, 0.30) inset, 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset', backdropFilter: 'blur(16px)'}}>
+      <div className='flex flex-col h-fit gap-3 p-3 bg-white rounded-full bg-opacity-10' style={{boxShadow: '0px 8px 4px 0px rgba(0, 0, 0, 0.05), 0px 1px 1px 0px rgba(255, 255, 255, 0.30) inset, 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset', backdropFilter: 'blur(16px)'}}>
         <button onClick={handleTooglePlay} className={playVideo ? 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200' : 'p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-300'}>{playVideo ? <PauseCircle width={24} height={24} color='white' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/> : <Image src={play} alt='play' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/>}</button>
         <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={accessibility} alt='accessibility' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
         <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={albums} alt='albums' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
