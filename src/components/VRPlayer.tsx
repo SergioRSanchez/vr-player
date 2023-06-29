@@ -28,13 +28,16 @@ interface VRPlayer {
 export function VRPLayer(props: VRPlayer) {
   const [ playVideo, setPlayVideo ] = useState(false)
 
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRefOne = useRef<HTMLVideoElement>(null)
+  const videoRefTwo = useRef<HTMLVideoElement>(null)
   function handleTooglePlay () {
-    if (videoRef.current && videoRef.current.paused) {
-      videoRef.current.play()
+    if (videoRefOne.current && videoRefOne.current.paused) {
+      videoRefOne.current.play()
+      videoRefTwo.current?.play()
       setPlayVideo(true)
     } else {
-      videoRef.current?.pause()
+      videoRefOne.current?.pause()
+      videoRefTwo.current?.pause()
       setPlayVideo(false)
     }
   }
@@ -65,7 +68,7 @@ export function VRPLayer(props: VRPlayer) {
             <button className='p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-all duration-200'><Image src={chevronForward} alt='forward' className='opacity-70 trasnform-all duration-200 hover:opacity-100'/></button>
           </div>
 
-          <form action="" className='flex items-center justify-between w-[440px] px-3 bg-black bg-opacity-10 rounded-full' style={{boxShadow: '0px -1px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 0px 0px rgba(0, 0, 0, 0.20) inset;'}}>
+          <form className='flex items-center justify-between w-[440px] px-3 bg-black bg-opacity-10 rounded-full' style={{boxShadow: '0px -1px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 0px 0px rgba(0, 0, 0, 0.20) inset;'}}>
             <Image src={text} alt='Aa' />
             <div className='flex gap-1 leading-none text-sm text-white text-opacity-80'>
               <Image src={lockClosed} alt='cadeado fechado' />
@@ -81,9 +84,13 @@ export function VRPLayer(props: VRPlayer) {
           </div>
         </div>
 
-        <div style={{boxShadow: '0 8px 4px 0 rgba(0,0,0,0.5)'}} className='rounded-3xl'>
-          <video className='max-w-[960px] rounded-3xl border-gray-400 aspect-video' ref={videoRef}>
-            <source src='https://s3-figma-videos-production-sig.figma.com/video/809392342680586849/TEAM/1706/1338/-9793-41dd-895b-abd6b1a01ef3?Expires=1688947200&Signature=L4~FKvbkgPjIHxOJTchwmhf8DrErSvqDNg64h3w5FnShMftJbLZwpns5L5FkOeEfHfswwTBl7JOr2x42Vsm9WI7c6OTcGJlClFjXlZkJG~WHAF8QEuta~dM9Xs98hvToZRjTSv-ojva0mkwggyBHKXib1hcyXJTNmEHTwBC51FRajUOz4o3ywkPZWLfAB0KowP70YaDCT8BAK1Y0k0RxbIGEQzmVWyy0WFmO8m5htxoyK9Hm4jIGMTFDk1LWfox2BCNI-K4csoWMQlIMtQhVLI987xl4M8bJIdj8RDCdUipfJ-Hx5F1jkbt28oetQeivwrzPo85o83zMmlUrYghaNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'/>
+        <div style={{boxShadow: '0 8px 4px 0 rgba(0,0,0,0.5)'}} className='rounded-3xl relative'>
+          <video className='max-w-[960px] rounded-3xl border-gray-400 aspect-video' ref={videoRefOne}>
+            <source src='./fluid.mp4' type='video/mp4'/>
+            Seu navegador não suporta a reprodução de vídeo
+          </video>
+          <video className='max-w-[960px] rounded-3xl border-gray-400 aspect-video absolute inset-0 scale-125 -z-10 opacity-50' style={{filter: 'blur(100px)'}} ref={videoRefTwo}>
+          <source src='./fluid.mp4' type='video/mp4'/>
             Seu navegador não suporta a reprodução de vídeo
           </video>
         </div>

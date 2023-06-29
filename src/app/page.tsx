@@ -26,7 +26,7 @@ const Background: React.FC<BackGroundProps> = (props) => {
       quality={100}
       fill
       sizes='100vh'
-      style={{objectFit: 'cover', zIndex: '-1', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
+      style={{objectFit: 'cover', zIndex: '-20', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
       className={props.theather ? 'brightness-50 transition-all duration-300' : 'transition-all duration-300'}
     />
   )
