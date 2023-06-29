@@ -78,7 +78,7 @@ export function VRPLayer(props: VRPlayer) {
               <Image src={lockClosed} alt='cadeado fechado' />
               <p>rocketseat.com</p>
             </div>
-            <button onClick={reloadPage}><Image src={refresh} alt='refresh' /></button>
+            <button onClick={reloadPage}><Image src={refresh} alt='refresh' className='opacity-70 hover:opacity-100 transition-all duration-200'/></button>
           </form>
 
           <div className='flex gap-4 '>
