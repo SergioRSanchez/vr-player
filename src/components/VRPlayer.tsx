@@ -42,6 +42,10 @@ export function VRPLayer(props: VRPlayer) {
     }
   }
 
+  function reloadPage() {
+    window.location.reload()
+  }
+
   return (
     <div className='flex gap-4 items-center' id='app'>
       <button className='absolute top-4 right-4 transition-all duration-300 hover:scale-110 opacity-80 hover:opacity-100' onClick={props.toogleTheatherMode}>
@@ -74,7 +78,7 @@ export function VRPLayer(props: VRPlayer) {
               <Image src={lockClosed} alt='cadeado fechado' />
               <p>rocketseat.com</p>
             </div>
-            <Image src={refresh} alt='refresh' />
+            <button onClick={reloadPage}><Image src={refresh} alt='refresh' /></button>
           </form>
 
           <div className='flex gap-4 '>
