@@ -86,11 +86,11 @@ export function VRPLayer(props: VRPlayer) {
 
         <div style={{boxShadow: '0 8px 4px 0 rgba(0,0,0,0.5)'}} className='rounded-3xl relative'>
           <video className='max-w-[960px] rounded-3xl border-gray-400 aspect-video' ref={videoRefOne}>
-            <source src='https://s3-figma-videos-production-sig.figma.com/video/809392342680586849/TEAM/1706/1338/-9793-41dd-895b-abd6b1a01ef3?Expires=1688947200&Signature=L4~FKvbkgPjIHxOJTchwmhf8DrErSvqDNg64h3w5FnShMftJbLZwpns5L5FkOeEfHfswwTBl7JOr2x42Vsm9WI7c6OTcGJlClFjXlZkJG~WHAF8QEuta~dM9Xs98hvToZRjTSv-ojva0mkwggyBHKXib1hcyXJTNmEHTwBC51FRajUOz4o3ywkPZWLfAB0KowP70YaDCT8BAK1Y0k0RxbIGEQzmVWyy0WFmO8m5htxoyK9Hm4jIGMTFDk1LWfox2BCNI-K4csoWMQlIMtQhVLI987xl4M8bJIdj8RDCdUipfJ-Hx5F1jkbt28oetQeivwrzPo85o83zMmlUrYghaNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'/>
+            <source src='./fluid.mp4'/>
             Seu navegador não suporta a reprodução de vídeo
           </video>
           <video className='max-w-[960px] rounded-3xl border-gray-400 aspect-video absolute inset-0 scale-125 -z-10 opacity-50' style={{filter: 'blur(100px)'}} ref={videoRefTwo}>
-            <source src='https://s3-figma-videos-production-sig.figma.com/video/809392342680586849/TEAM/1706/1338/-9793-41dd-895b-abd6b1a01ef3?Expires=1688947200&Signature=L4~FKvbkgPjIHxOJTchwmhf8DrErSvqDNg64h3w5FnShMftJbLZwpns5L5FkOeEfHfswwTBl7JOr2x42Vsm9WI7c6OTcGJlClFjXlZkJG~WHAF8QEuta~dM9Xs98hvToZRjTSv-ojva0mkwggyBHKXib1hcyXJTNmEHTwBC51FRajUOz4o3ywkPZWLfAB0KowP70YaDCT8BAK1Y0k0RxbIGEQzmVWyy0WFmO8m5htxoyK9Hm4jIGMTFDk1LWfox2BCNI-K4csoWMQlIMtQhVLI987xl4M8bJIdj8RDCdUipfJ-Hx5F1jkbt28oetQeivwrzPo85o83zMmlUrYghaNw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'/>
+            <source src='./fluid.mp4'/>
             Seu navegador não suporta a reprodução de vídeo
           </video>
         </div>
